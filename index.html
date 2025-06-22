@@ -158,7 +158,6 @@
     <h1 class="couple-name">Abel & Alondra</h1>
     <img src="abelaloboda.jpeg" alt="Abel y Alondra" class="photo">
     <p>¡Nos casamos!</p>
-    <p>Hay momentos en la vida que son irrepetibles… pero compartidos con las personas que más quieres, estos se vuelven inolvidables.</p>
   </header>
 
   <section>
@@ -167,13 +166,16 @@
       Tu navegador no soporta el audio.
     </audio>
   </section>
-<div class="countdown" id="countdown">Cargando cuenta regresiva...</div>
+
+  <div class="countdown" id="countdown">Cargando cuenta regresiva...</div>
+
+  
   <section>
     <h2>Detalles del Evento</h2>
     <div class="info-box">
       <h3>📍 Ubicación</h3>
       <p>Hacienda El Paraíso, Valle de Bravo, Estado de México</p>
-      <a class="map-button" href="https://www.google.com/maps/place/Hacienda+El+Para%C3%ADso+Valle+de+Bravo/" target="_blank">Ver en Google Maps</a>
+      <a class="map-button" href="https://g.co/kgs/iKSDQJn" target="_blank">Ver en Google Maps</a>
     </div>
 
     <div class="info-box">
@@ -183,7 +185,7 @@
 
     <div class="info-box">
       <h3>🕒 Horario</h3>
-      <p>Sábado 20 de Septiembre de 2025</p>
+      <p>Sábado 13 de Diciembre de 2025</p>
       <p>Ceremonia: 5:00 PM</p>
       <p>Recepción: 7:00 PM</p>
     </div>
@@ -202,7 +204,7 @@
     <h2>Confirmación de Asistencia</h2>
     <p style="font-size: 1.4em;">Confirma tu asistencia al evento a través de este medio:</p>
 
-    <form action="https://script.google.com/macros/s/AKfycbxvr2J-dd-HAwI7KysoGU6uJLhmPzPnArSZSELNVRKV6smbaANfVnVs8ZgpF6RYp3XvIg/exec" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left;">
+    <form id="rsvp-form" style="max-width: 600px; margin: 0 auto; text-align: left;">
       <label>Nombre:<br><input type="text" name="nombre" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></label><br><br>
       <label>Número de teléfono:<br><input type="tel" name="telefono" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></label><br><br>
       <label>Email:<br><input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></label><br><br>
@@ -249,7 +251,29 @@
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
+
+    // Formulario personalizado con alert
+    const form = document.getElementById('rsvp-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch('https://script.google.com/macros/s/AKfycbxvr2J-dd-HAwI7KysoGU6uJLhmPzPnArSZSELNVRKV6smbaANfVnVs8ZgpF6RYp3XvIg/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        alert('Información enviada, ¡muchas gracias!');
+        form.reset();
+      })
+      .catch(error => {
+        alert('Hubo un error al enviar tu información. Intenta nuevamente.');
+        console.error(error);
+      });
+    });
   </script>
 
 </body>
 </html>
+
+
+
