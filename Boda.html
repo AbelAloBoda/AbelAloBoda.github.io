@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda - Abel y Alondra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to bottom, #f5e9da, #f9f3ef);
+      color: #7a5c4d;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f3e5d8;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    .photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #e2cfc3;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .couple-name {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: #a67c52;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      margin: 10px 0;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInUp 1.5s ease-in;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .info-box {
+      background-color: #fff6ef;
+      border: 1px solid #e2cfc3;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info-box p {
+      font-size: 1.4em;
+      margin: 10px 0;
+    }
+
+    .map-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #c7a98b;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .map-button:hover {
+      background-color: #a98266;
+    }
+
+    .countdown {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 30px auto;
+      color: #a67c52;
+      background: #fff6ef;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 1.2em;
+      color: #8b6f60;
+    }
+
+    input, textarea {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.1em;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+      .photo {
+        width: 140px;
+        height: 140px;
+      }
+      .couple-name {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="couple-name">Abel & Alondra</h1>
+    <img src="img/abelaloboda.jpeg" alt="Abel y Alondra" class="photo">
+    <p>¡Nos casamos!</p>
+    <p></p>
+  </header>
+
+  <section>
+    <audio controls autoplay loop>
+      <source src="cancion-boda.mp3" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
+  </section>
+<div class="countdown" id="countdown">Cargando cuenta regresiva...</div>
+  <section>
+    <h2>Detalles del Evento</h2>
+    <div class="info-box">
+      <h3>📍 Ubicación</h3>
+      <p>Hacienda El Paraíso, Valle de Bravo, Estado de México</p>
+      <a class="map-button" href="https://www.google.com/maps/place/Hacienda+El+Para%C3%ADso+Valle+de+Bravo/" target="_blank">Ver en Google Maps</a>
+    </div>
+
+    <div class="info-box">
+      <h3>🗺️ Mapa del lugar</h3>
+      <img src="ubicacion.jpg" alt="Mapa de ubicación" style="width:100%; max-width:500px; border-radius:10px;">
+    </div>
+
+    <div class="info-box">
+      <h3>🕒 Horario</h3>
+      <p>Sábado 20 de Septiembre de 2025</p>
+      <p>Ceremonia: 5:00 PM</p>
+      <p>Recepción: 7:00 PM</p>
+    </div>
+
+    <div class="info-box">
+      <h3>👗 Código de Vestimenta</h3>
+      <p>🎩 Formal Elegante</p>
+      <p>👔 Hombres: Traje o guayabera formal</p>
+      <p>👗 Mujeres: Vestido largo o de cóctel</p>
+      <p>🎨 Colores sugeridos: Beige, nude, tonos tierra</p>
+      <p>🚫 Favor de evitar el blanco</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Confirmación de Asistencia</h2>
+    <p style="font-size: 1.4em;">Confirma tu asistencia al evento a través de este medio:</p>
+
+    <form action="https://script.google.com/macros/s/AKfycbxvr2J-dd-HAwI7KysoGU6uJLhmPzPnArSZSELNVRKV6smbaANfVnVs8ZgpF6RYp3XvIg/exec" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left;">
+      <label>Nombre:<br><input type="text" name="nombre" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></label><br><br>
+      <label>Número de teléfono:<br><input type="tel" name="telefono" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></label><br><br>
+      <label>Email:<br><input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></label><br><br>
+      <label><input type="checkbox" name="asistire" value="Sí"> ✔️ Asistiré</label><br>
+      <label><input type="checkbox" name="asistire" value="No"> ❌ No podré asistir</label><br><br>
+      <label>Número de personas que me acompañan:<br><input type="number" name="acompañantes" min="0" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></label><br><br>
+      <label>Felicitaciones a los novios:<br><textarea name="felicitaciones" rows="4" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea></label><br><br>
+      <button type="submit" style="padding: 12px 20px; background-color: #c7a98b; color: white; border: none; border-radius: 30px; font-size: 1em;">Enviar</button>
+    </form>
+  </section>
+
+  <section style="text-align:center; padding: 40px;">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas o quieres enviar un mensaje directo?</p>
+    <a href="https://wa.me/5215555555555" target="_blank" style="text-decoration: none;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" style="vertical-align: middle; margin-top: 10px;">
+      <p style="font-size: 1.3em; color: #25D366;">Escríbenos por WhatsApp</p>
+    </a>
+  </section>
+
+  <footer>
+    Con amor,<br> Abel y Alondra 💍
+  </footer>
+
+  <script>
+    const countdown = document.getElementById('countdown');
+    const targetDate = new Date('December 13, 2025 00:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `Faltan <strong>${days}</strong> días, <strong>${hours}</strong> horas, <strong>${minutes}</strong> minutos y <strong>${seconds}</strong> segundos para nuestra boda`;
+
+      if (distance < 0) {
+        countdown.innerHTML = "¡Hoy es el gran día! 💍";
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>
+
+
+
