@@ -16,16 +16,14 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      width: 100%;
-      overflow-x: hidden;
-    }
-
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #ffffff;
       color: #2e2e2e;
+      overflow-x: hidden;
       position: relative;
+      /* Quitar scroll vertical */
+      overflow-y: hidden;
     }
 
     #particles-js {
@@ -49,7 +47,7 @@
     h1, .nombres, .mensaje {
       opacity: 0;
       transform: translateY(30px);
-      animation: fadeInUp 1.2s ease-out forwards;
+      animation: fadeInUp 1s ease-out forwards;
     }
 
     h1 {
@@ -74,7 +72,7 @@
     }
 
     .mensaje {
-      font-family: 'Libre Baskerville', serif;
+      font-family: 'Libre Baskerville', 'Times New Roman', serif;
       font-size: 1.2em;
       font-style: italic;
       font-weight: 300;
@@ -93,16 +91,15 @@
       height: auto;
       padding: 0 15px;
     }
-
+    /* Gradiente superior para fade-in */
     .imagen-fondo::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 25%;
-      background: linear-gradient(to bottom, #ffffff, transparent);
-      z-index: 1;
+      top: 0; left: 0; right: 0;
+      height: 140px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0));
+      pointer-events: none;
+      z-index: 2;
     }
 
     .imagen-fondo img {
@@ -111,10 +108,11 @@
       object-fit: cover;
       display: block;
       position: relative;
-      z-index: 0;
+      z-index: 1;
     }
 
     .imagen-secundaria {
+      position: relative;
       width: 100%;
       max-width: 500px;
       margin: 0 auto;
@@ -134,16 +132,6 @@
       .imagen-fondo,
       .imagen-secundaria {
         padding: 0 25px;
-      }
-
-      .numeros-contador {
-        flex-wrap: nowrap;
-        flex-direction: row;
-      }
-
-      .numeros-contador span {
-        font-size: 2.5em;
-        min-width: 55px;
       }
     }
 
@@ -181,6 +169,7 @@
       color: #555;
     }
 
+    /* Contador personalizado */
     .contador {
       background-color: #2e4e3f;
       color: #f4f1ea;
@@ -204,12 +193,19 @@
     .numeros-contador {
       display: flex;
       justify-content: center;
-      gap: 18px;
+      gap: 12px;
       flex-wrap: nowrap;
     }
 
-    .numeros-contador span {
-      font-size: 3em;
+    .unidad {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 60px;
+    }
+
+    .unidad span {
+      font-size: 2.8em;
       font-style: italic;
       font-weight: 600;
       background-color: #2e4e3f;
@@ -222,12 +218,14 @@
       animation: palpito 3s infinite ease-in-out;
     }
 
+    .unidad small {
+      font-size: 1em;
+      margin-top: 5px;
+    }
+
+    /* Animaciones */
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
@@ -238,7 +236,7 @@
         transform: scale(1);
       }
       50% {
-        transform: scale(1.03);
+        transform: scale(1.08);
       }
     }
   </style>
@@ -278,10 +276,10 @@
     <div class="contador">
       <div class="titulo-contador">Faltan</div>
       <div class="numeros-contador">
-        <span id="dias">0</span>d 
-        <span id="horas">0</span>h 
-        <span id="minutos">0</span>m 
-        <span id="segundos">0</span>s
+        <div class="unidad"><span id="dias">0</span><small>d</small></div>
+        <div class="unidad"><span id="horas">0</span><small>h</small></div>
+        <div class="unidad"><span id="minutos">0</span><small>m</small></div>
+        <div class="unidad"><span id="segundos">0</span><small>s</small></div>
       </div>
     </div>
   </div>
