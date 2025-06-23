@@ -76,21 +76,30 @@
       letter-spacing: 0.5px;
     }
 
-    .imagen-fondo {
-      position: relative;
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-      overflow: hidden;
-      height: auto; /* Cambiado para mantener proporciones */
-    }
+  .imagen-fondo {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+  padding: 0 15px; /* margen interno para que no toque los bordes */
+}
 
-    .imagen-fondo img {
-      width: 100%;
-      height: auto; /* Cambiado para mantener proporciones */
-      object-fit: cover;
-      display: block;
-    }
+.imagen-fondo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Opcional: más margen lateral en pantallas pequeñas */
+@media (max-width: 480px) {
+  .imagen-fondo {
+    padding: 0 25px;
+  }
+}
+
 
     .degradado {
       position: absolute;
