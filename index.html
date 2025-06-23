@@ -6,7 +6,7 @@
   <title>Invitación de Boda</title>
 
   <!-- Fuentes y Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Open+Sans&family=Libre+Baskerville&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
@@ -49,35 +49,45 @@
     }
 
     h1 {
+      font-family: 'Libre Baskerville', serif;
       font-size: 1.8em;
-      margin-top: 20px;
-      animation-delay: 0.3s;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      animation-delay: 0.4s;
     }
 
     .nombres {
       font-family: 'Playfair Display', serif;
       font-size: 2.3em;
+      font-style: italic;
       color: #2e4e3f;
       margin: 10px 0;
       animation-delay: 0.6s;
+      letter-spacing: 1px;
     }
 
     .mensaje {
       font-size: 1em;
       margin: 15px 0 30px;
       animation-delay: 0.9s;
+      letter-spacing: 0.5px;
     }
 
     .imagen-fondo {
       position: relative;
       width: 100%;
-      height: 450px;
+      max-width: 500px;
+      margin: 0 auto;
       overflow: hidden;
+      height: auto; /* Cambiado para mantener proporciones */
     }
 
     .imagen-fondo img {
       width: 100%;
-      height: 100%;
+      height: auto; /* Cambiado para mantener proporciones */
       object-fit: cover;
       display: block;
     }
@@ -194,21 +204,20 @@
     </div>
 
     <h1>¡Nos casamos!</h1>
+
     <div class="nombres">Alondra & Abel</div>
+
     <p class="mensaje">Hay momentos en la vida que son irrepetibles… pero compartidos con las personas que más quieres, estos se vuelven inolvidables.</p>
 
-<div class="imagen-fondo">
-      <img src="abelaloboda.jpeg" alt="Foto de los novios" />
+    <div class="imagen-fondo">
+      <img src="abelalo2.jpeg" alt="Foto de los novios" />
       <div class="degradado"></div>
     </div>
-
 
     <!-- Contador regresivo -->
     <div class="contador">
       Faltan <span id="dias">0</span>d <span id="horas">0</span>h <span id="minutos">0</span>m <span id="segundos">0</span>s
     </div>
-
-    
   </div>
 
   <!-- Audio real -->
