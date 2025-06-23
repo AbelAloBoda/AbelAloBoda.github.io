@@ -165,7 +165,7 @@
       display: flex;
       justify-content: center;
       gap: 18px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap; /* No permitir salto de línea */
     }
 
     .numeros-contador span {
@@ -180,6 +180,19 @@
       text-align: center;
       user-select: none;
       animation: palpito 2s infinite ease-in-out;
+      white-space: nowrap;
+    }
+
+    /* Ajuste para móvil: reducir tamaño para que quepa */
+    @media (max-width: 480px) {
+      .numeros-contador span {
+        font-size: 2em;
+        min-width: 40px;
+        padding: 0 6px;
+      }
+      .titulo-contador {
+        font-size: 2em;
+      }
     }
 
     /* Animaciones */
@@ -297,3 +310,4 @@
   </script>
 </body>
 </html>
+
