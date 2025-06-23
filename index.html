@@ -16,12 +16,12 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       font-family: 'Open Sans', sans-serif;
       background-color: #ffffff;
       color: #2e2e2e;
       overflow-x: hidden;
-      position: relative;
+      scroll-behavior: smooth;
     }
 
     #particles-js {
@@ -99,6 +99,19 @@
       display: block;
     }
 
+    /* Gradiente superior suave */
+    .imagen-fondo-con-gradiente::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(to bottom, #ffffff 0%, #ffffffcc 30%, #ffffff00 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
     @media (max-width: 480px) {
       .imagen-fondo,
       .imagen-secundaria {
@@ -164,35 +177,24 @@
     .numeros-contador {
       display: flex;
       justify-content: center;
-      gap: 18px;
-      flex-wrap: nowrap; /* No permitir salto de línea */
+      gap: 12px;
+      flex-wrap: nowrap;
+      flex-shrink: 1;
+      overflow: hidden;
     }
 
     .numeros-contador span {
-      font-size: 3em;
+      font-size: 2.8em;
       font-style: italic;
       font-weight: 600;
       background-color: #2e4e3f;
       color: #f4f1ea;
       border-radius: 10px;
       padding: 0 10px;
-      min-width: 60px;
+      min-width: 55px;
       text-align: center;
       user-select: none;
       animation: palpito 2s infinite ease-in-out;
-      white-space: nowrap;
-    }
-
-    /* Ajuste para móvil: reducir tamaño para que quepa */
-    @media (max-width: 480px) {
-      .numeros-contador span {
-        font-size: 2em;
-        min-width: 40px;
-        padding: 0 6px;
-      }
-      .titulo-contador {
-        font-size: 2em;
-      }
     }
 
     /* Animaciones */
@@ -211,7 +213,16 @@
         transform: scale(1.08);
       }
     }
+
+    /* Scroll animación con AOS */
+    [data-aos] {
+      opacity: 0;
+      transition-property: transform, opacity;
+    }
   </style>
+
+  <!-- AOS Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -233,19 +244,19 @@
       <p class="texto-musica">Dale play para escuchar nuestra canción</p>
     </div>
 
-    <h1>¡Nos casamos!</h1>
-    <div class="nombres">Alondra & Abel</div>
-    <p class="mensaje">Después de 10 años <br> llega nuestro para siempre.</p>
+    <h1 data-aos="fade-up">¡Nos casamos!</h1>
+    <div class="nombres" data-aos="fade-up" data-aos-delay="200">Alondra & Abel</div>
+    <p class="mensaje" data-aos="fade-up" data-aos-delay="400">Después de 10 años <br> llega nuestro para siempre.</p>
 
-    <div class="imagen-fondo">
+    <div class="imagen-fondo imagen-fondo-con-gradiente" data-aos="fade-up" data-aos-delay="600">
       <img src="abelalo2.jpeg" alt="Foto de los novios" />
     </div>
 
-    <div class="imagen-secundaria">
+    <div class="imagen-secundaria" data-aos="fade-up" data-aos-delay="800">
       <img src="imgrelboda2.png" alt="Imagen secundaria" />
     </div>
 
-    <div class="contador">
+    <div class="contador" data-aos="zoom-in" data-aos-delay="1000">
       <div class="titulo-contador">Faltan</div>
       <div class="numeros-contador">
         <span id="dias">0</span>d 
@@ -259,7 +270,10 @@
   <audio id="audio" src="cancionBodaCR.mp3"></audio>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    AOS.init();
+
     particlesJS("particles-js", {
       particles: {
         number: { value: 40 },
@@ -310,4 +324,3 @@
   </script>
 </body>
 </html>
-
