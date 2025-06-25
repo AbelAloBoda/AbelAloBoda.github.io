@@ -146,9 +146,9 @@ h1 {
   background-color: #2e4e3f;
   color: #f4f1ea;
   padding: 30px 20px;
-  margin: 40px auto; /* This sets the horizontal margins to be equal */
+  margin: 40px auto;
   border-radius: 20px;
-  width: 95%; /* This, combined with max-width, controls the inner width */
+  width: 95%;
   max-width: 480px;
   font-family: 'Great Vibes', cursive;
   text-align: center;
@@ -205,13 +205,15 @@ h1 {
   }
 }
 
-/* Save the Date Section Styles (cleaned up and confirmed) */
+
+/* Save the Date Section Styles */
 .save-the-date-section {
   position: relative;
-  width: 95%; /* This is crucial for matching side margins */
-  max-width: 480px; /* This is crucial for matching side margins */
-  margin: 40px auto; /* 'auto' here makes left/right margins identical */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   overflow: hidden; /* Ensures content inside respects border-radius */
+  margin-top: 30px;
   border-radius: 20px; /* Rounded corners, same as timer */
 }
 
@@ -220,6 +222,7 @@ h1 {
   height: auto;
   display: block;
   object-fit: cover;
+  /* No border-radius here, it should be on the parent div to clip the image */
 }
 
 .save-the-date-overlay {
@@ -254,14 +257,16 @@ h1 {
 /* End Save the Date Section Styles */
 
 
+
+
 /* Combined Event Section Styles (replacing old .ceremonia-section) */
 .eventos-section {
   background-color: #2e4e3f; /* Dark green, same as .contador */
   color: #f4f1ea; /* Light text, same as .contador */
   padding: 40px 20px;
-  margin: 40px auto; /* This sets the horizontal margins to be equal */
+  margin: 40px auto; /* Same margin as .contador */
   border-radius: 20px; /* Same border-radius as .contador */
-  width: 95%; /* This, combined with max-width, controls the inner width */
+  width: 95%; /* Same width as .contador */
   max-width: 480px; /* Same max-width as .contador */
   text-align: center;
   position: relative;
@@ -341,3 +346,245 @@ h1 {
   background-color: #C2CCBF; /* Slightly darker on hover */
 }
 /* End Combined Event Section Styles */
+
+/* NEW SECTION STYLES: Confirmation */
+.confirmation-section {
+  background-color: #eaf1e8; /* Light green background */
+  color: #2e4e3f; /* Dark green text */
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 480px;
+  text-align: center;
+  position: relative; /* For floral decoration positioning */
+  overflow: hidden; /* To contain the floral decoration if it goes outside */
+}
+
+.confirmation-message {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  z-index: 10; /* Ensure text is above floral decoration */
+  position: relative;
+}
+
+.confirmation-button-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.confirmation-button {
+  background-color: #6a8c7b; /* A darker green for the button */
+  color: #ffffff;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px; /* More rounded */
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-button:hover {
+  background-color: #5b7969; /* Slightly darker on hover */
+}
+
+.confirmation-deadline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  color: #555; /* Slightly lighter gray for the small text */
+  margin-bottom: 10px; /* Space before floral if it's below */
+  z-index: 10; /* Ensure text is above floral decoration */
+  position: relative;
+}
+
+
+/* NEW SECTION STYLES: Playlist */
+.playlist-section {
+  background-color: #2e4e3f; /* Dark green, same as contador/eventos */
+  color: #f4f1ea; /* Light text */
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 480px;
+  text-align: center;
+  position: relative;
+}
+
+.playlist-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 25px;
+  font-style: italic;
+  font-weight: normal;
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Slight shadow for readability */
+}
+
+.playlist-message {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  padding: 0 15px; /* Add some horizontal padding */
+}
+
+.playlist-button-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.playlist-button {
+  background-color: #D7E2D5; /* Light green from image */
+  color: #4A6D5A; /* Dark green for text */
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.playlist-button:hover {
+  background-color: #C2CCBF; /* Slightly darker on hover */
+}
+
+/* Styles for the new Confirmation Form page */
+
+.formulario-invitacion {
+  padding: 30px; /* Add padding to the form container */
+}
+
+.rsvp-form {
+  background-color: #f4f1ea; /* Light background for the form itself */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  text-align: left; /* Align form elements to the left */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: #2e4e3f; /* Dark green for labels */
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 12px 10px;
+  border: 1px solid #a3c9a8; /* Light green border */
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: #2e2e2e;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #6a8c7b; /* Darker green on focus */
+  box-shadow: 0 0 0 3px rgba(106, 140, 123, 0.3); /* Subtle glow */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.asistencia-group p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: #2e4e3f;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.asistencia-group label {
+  display: inline-flex; /* Align radio button and text */
+  align-items: center;
+  margin-right: 25px; /* Space between options */
+  font-weight: normal; /* Override bold from generic label style */
+  cursor: pointer;
+}
+
+.asistencia-group input[type="radio"] {
+  margin-right: 8px;
+  width: auto; /* Override 100% width */
+}
+
+.hint-text {
+  display: block;
+  font-size: 0.85em;
+  color: #555;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Reusing .confirmation-button for form submission */
+.rsvp-form .confirmation-button {
+  width: auto; /* Reset to auto from previous 100% attempts */
+  padding: 14px 40px;
+  margin-top: 20px;
+  display: block; /* Make it a block element to take full width */
+  margin-left: auto; /* Center the button */
+  margin-right: auto;
+}
+
+.form-message {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.return-link {
+  margin-top: 30px;
+  font-size: 1em;
+}
+
+.return-link a {
+  color: #2e4e3f; /* Dark green link */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.return-link a:hover {
+  color: #6a8c7b; /* Lighter green on hover */
+  text-decoration: underline;
+}
