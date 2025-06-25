@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Asistencia - Boda Alondra y Abel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Open+Sans&family=Libre+Baskerville&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="invitacion formulario-invitacion">
+    <h1>Confirma Tu Asistencia</h1>
+    <p class="mensaje">¡Nos encantaría contar contigo en nuestro gran día!</p>
+
+    <form id="rsvpForm" class="rsvp-form">
+      <div class="form-group">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="Nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="Telefono">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+
+      <div class="form-group asistencia-group">
+        <p>¿Asistirás?</p>
+        <label>
+          <input type="radio" name="Asistire" value="Si" required> Sí, con gusto.
+        </label>
+        <label>
+          <input type="radio" name="Asistire" value="No"> No podré asistir.
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="acompanantes">Número de acompañantes (incluyéndote a ti):</label>
+        <input type="number" id="acompanantes" name="Acompañantes" min="0" value="0" required>
+        <small class="hint-text">Si vienes solo, coloca 1. Si no asistes, coloca 0.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="comentario">Comentario / Felicitaciones:</label>
+        <textarea id="comentario" name="Comentario" rows="4"></textarea>
+      </div>
+
+      <input type="hidden" name="FechaConfirmacion" id="fechaConfirmacion" value="">
+
+      <button type="submit" class="confirmation-button">Enviar Confirmación</button>
+    </form>
+
+    <div id="formMessage" class="form-message" style="display: none;"></div>
+
+    <p class="return-link"><a href="index.html">Volver a la invitación</a></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script> <script src="confirmacion-form.js"></script> </body>
+</html>
