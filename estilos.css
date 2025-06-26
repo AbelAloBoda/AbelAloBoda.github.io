@@ -207,10 +207,12 @@ h1 {
 
 
 /* Save the Date Section Styles */
+/* Save the Date Section Styles */
 .save-the-date-section {
   position: relative;
-  width: 100%;
-  max-width: 500px;
+  /* CHANGE these two lines: */
+  width: 95%; /* Make it 95% like contador and eventos-section */
+  max-width: 480px; /* Make it 480px like contador and eventos-section */
   margin: 0 auto;
   overflow: hidden; /* Ensures content inside respects border-radius */
   margin-top: 30px;
@@ -222,10 +224,10 @@ h1 {
   height: auto;
   display: block;
   object-fit: cover;
-  /* ADD THIS LINE: */
   border-radius: inherit; /* The image will now inherit the border-radius from its parent div */
 }
 
+/* ... (rest of the save-the-date-section styles remain the same) ... */
 .save-the-date-overlay {
   position: absolute;
   top: 0;
