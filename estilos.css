@@ -222,7 +222,8 @@ h1 {
   height: auto;
   display: block;
   object-fit: cover;
-  /* No border-radius here, it should be on the parent div to clip the image */
+  /* ADD THIS LINE: */
+  border-radius: inherit; /* The image will now inherit the border-radius from its parent div */
 }
 
 .save-the-date-overlay {
@@ -255,7 +256,6 @@ h1 {
   font-weight: normal; /* Great Vibes is usually naturally lighter/thinner */
 }
 /* End Save the Date Section Styles */
-
 
 
 
