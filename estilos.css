@@ -453,6 +453,31 @@ h1 {
 .regalos-button:hover {
  background-color: #5b7969;
 }
+/*botón de regalos */
+.regalos-button-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px; /* Para separar el botón del texto del mensaje */
+}
+
+.regalos-button {
+  background-color: #D7E2D5; /* O el color que prefieras para los botones de esta sección */
+  color: #4A6D5A; /* Color del texto del botón */
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.regalos-button:hover {
+  background-color: #C2CCBF; /* Color al pasar el ratón */
+}
 
 
 /* NEW SECTION STYLES: Confirmation */
