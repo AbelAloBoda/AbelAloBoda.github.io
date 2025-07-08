@@ -350,6 +350,17 @@ h1 {
   position: relative;
 }
 
+.vestimenta-circle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(46, 78, 63, 0.7); /* Color de contraste con el fondo */
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(46, 78, 63, 0.3);
+}
+
 
 .vestimenta-title {
   font-family: 'Great Vibes', cursive;
