@@ -350,19 +350,6 @@ h1 {
   position: relative;
 }
 
-.vestimenta-circle {
-  /* Si necesitas un círculo decorativo como en eventos, agrégalo aquí.
-     Si no, puedes eliminar esta clase en HTML y CSS.
-  */
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 18px;
-  height: 18px;
-  background-color: rgba(46, 78, 63, 0.7); /* Color de contraste con el fondo */
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(46, 78, 63, 0.3);
-}
 
 .vestimenta-title {
   font-family: 'Great Vibes', cursive;
@@ -378,22 +365,14 @@ h1 {
   padding: 0 15px;
 }
 
-/* Estilos generales para iconos o el SVG, puedes ajustar para que el SVG predomine */
+/* ESTILOS PARA EL ÍCONO DE FONT AWESOME (VESTIDO) */
 .vestimenta-icon {
-  margin-bottom: 20px;
+  font-size: 5em; /* Tamaño del icono */
+  margin-bottom: 20px; /* Espacio debajo del icono */
   opacity: 0.8;
-  /* font-size: 5em;  <- Esta línea es para iconos de fuente, el SVG usa width */
+  color: #2e4e3f; /* Color del icono, debe contrastar con el fondo */
 }
 
-/* ESTILOS ESPECÍFICOS PARA EL SVG DEL TUXEDO */
-.tuxedo-icon {
-  width: 4em; /* Controla el tamaño del SVG */
-  height: auto;
-  display: block; /* Importante para centrar */
-  margin: 0 auto 20px auto; /* Centra el icono y le da margen inferior */
-  fill: #2e4e3f; /* Color del tuxedo, debe contrastar con el fondo de la sección */
-  opacity: 0.8;
-}
 
 .vestimenta-description {
   font-family: 'Open Sans', sans-serif;
