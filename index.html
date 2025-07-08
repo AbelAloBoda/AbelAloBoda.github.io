@@ -1,127 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación de Boda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Open+Sans&family=Libre+Baskerville&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Open+Sans&family=Libre+Baskerville&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  
-  <div id="particles-js"></div>
-  <div class="invitacion">
-    <div class="musica">
-      <div class="controles">
-        <button class="boton-musica" aria-label="Cancion anterior">
-          <i class="fas fa-backward"></i>
-        </button>
-        <button class="boton-musica" id="btnPlay" aria-label="Reproducir">
-          <i class="fas fa-play"></i>
-        </button>
-        <button class="boton-musica" aria-label="Siguiente canción">
-          <i class="fas fa-forward"></i>
-        </button>
-      </div>
-      <p class="texto-musica">Dale play para escuchar nuestra canción</p>
+
+    <div id="particles-js"></div>
+    <div class="invitacion">
+        <h1>¡Nos casamos!</h1>
+        <div class="nombres">Alondra Y Abel</div>
+        <p class="mensaje">Después de 10 años <br> llega nuestro PARA SIEMPRE.</p>
+
+        <div class="imagen-fondo">
+            <img src="Abelaloheader.jpeg" alt="Foto de los novios">
+        </div>
+
+        <div class="musica">
+            <div class="controles">
+                <button class="boton-musica" aria-label="Cancion anterior">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="boton-musica" id="btnPlay" aria-label="Reproducir">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="boton-musica" aria-label="Siguiente canción">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+            <p class="texto-musica">Dale play para escuchar nuestra canción</p>
+        </div>
+
+
+        <div class="imagen-secundaria">
+            <img src="imgrelboda2.png" alt="Imagen secundaria">
+        </div>
+
+        <div class="contador">
+            <div class="titulo-contador">Faltan</div>
+            <div class="numeros-contador">
+                <div class="unidad"><span id="dias">0</span><small>d</small></div>
+                <div class="unidad"><span id="horas">0</span><small>h</small></div>
+                <div class="unidad"><span id="minutos">0</span><small>m</small></div>
+                <div class="unidad"><span id="segundos">0</span><small>s</small></div>
+            </div>
+        </div>
+
+        <div class="save-the-date-section">
+            <img src="abelalo3.jpeg" alt="Save the Date">
+            <div class="save-the-date-overlay">
+                <p class="save-the-date-text">Save the date</p>
+                <p class="save-the-date-date">24.10.2026</p>
+            </div>
+        </div>
+
+        <div class="eventos-section">
+            <div class="eventos-circle"></div>
+
+            <div class="ceremonia-details">
+                <p class="event-title">Ceremonia</p>
+                <i class="fas fa-church event-icon"></i>
+                <p class="event-time">6:00 PM</p>
+                <p class="event-address">IGLESIA LA ERMITA VIRGEN DE SUYAPA</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=IGLESIA+LA+ERMITA+VIRGEN+DE+SUYAPA" target="_blank" class="ver-mapa-button-link">
+                    <button class="ver-mapa-button">VER MAPA</button>
+                </a>
+            </div>
+
+            <div class="divider"></div>
+            <div class="recepcion-details">
+                <p class="event-title">Recepción</p>
+                <i class="fas fa-champagne-glasses event-icon"></i>
+                <p class="event-time">7:00 PM</p>
+                <p class="event-address">SALÓN DE EVENTOS</p>
+                <a href="https://maps.app.goo.gl/Zf3TAhoC2urgBwpV8" target="Salon" class="ver-mapa-button-link">
+                    <button class="ver-mapa-button">VER MAPA</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="vestimenta-section">
+            <div class="vestimenta-circle"></div>
+            <p class="vestimenta-title">Vestimenta</p>
+            <div class="vestimenta-details">
+                <svg class="vestimenta-icon tuxedo-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#2E4E3F">
+                    <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM192 128c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V128zM352 128c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V128zM384 352H128c-17.7 0-32 14.3-32 32V448c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V384c0-17.7-14.3-32-32-32z"/>
+                </svg>
+                <p class="vestimenta-description">Formal de noche</p>
+                <p class="vestimenta-note">Se recomienda evitar el color blanco, beige o similares.</p>
+            </div>
+        </div>
+
+        <div class="regalos-section">
+            <div class="regalos-circle"></div>
+            <p class="regalos-title">Regalos</p>
+            <div class="regalos-details">
+                <i class="fas fa-gift regalos-icon"></i>
+                <p class="regalos-message">El mejor regalo es tu presencia, pero si deseas hacernos un obsequio, una contribución en efectivo será de gran ayuda para comenzar nuestro nuevo hogar.</p>
+            </div>
+        </div>
+
+        <div class="confirmation-section">
+            <p class="confirmation-message">Esta será una celebración solo para adultos, <br> ¡esperamos que puedas disfrutarla con nosotros!</p>
+            <a href="confirmacion.html" target="_blank" class="confirmation-button-link">
+                <button class="confirmation-button">Confirmar aquí</button>
+            </a>
+            <p class="confirmation-deadline">Por favor confirmar antes del 15 de septiembre de 2025</p>
+        </div>
+
+        <div class="playlist-section">
+            <p class="playlist-title">Tu misión:</p>
+            <p class="playlist-message">Salvar la pista de baile. Sumate al playlist de la boda, agrega los temazos que no pueden faltar entrando al siguiente link</p>
+            <a href="https://open.spotify.com/playlist/6ScR4M44TPl7k0BC7BDjzp?si=e_gdw3nOSTG5c3pWxONaHg" target="_blank" class="playlist-button-link">
+                <button class="playlist-button">¡Armemos el Playlist!</button>
+            </a>
+        </div>
+
     </div>
+    <audio id="audio" src="cancionBodaCR.mpol3"></audio>
 
-    <h1>¡Nos casamos!</h1>
-    <div class="nombres">Alondra Y Abel</div>
-    <p class="mensaje">Después de 10 años <br> llega nuestro PARA SIEMPRE.</p>
-    
-    <div class="imagen-fondo">
-      <img src="Abelaloheader.jpeg" alt="Foto de los novios">
-    </div>
-
-    <div class="imagen-secundaria">
-      <img src="imgrelboda2.png" alt="Imagen secundaria">
-    </div>
-
-    <div class="contador">
-      <div class="titulo-contador">Faltan</div>
-      <div class="numeros-contador">
-        <div class="unidad"><span id="dias">0</span><small>d</small></div>
-        <div class="unidad"><span id="horas">0</span><small>h</small></div>
-        <div class="unidad"><span id="minutos">0</span><small>m</small></div>
-        <div class="unidad"><span id="segundos">0</span><small>s</small></div>
-      </div>
-    </div>
-
-     <div class="save-the-date-section">
-      <img src="abelalo3.jpeg" alt="Save the Date">
-      <div class="save-the-date-overlay">
-        <p class="save-the-date-text">Save the date</p>
-        <p class="save-the-date-date">24.10.2026</p>
-      </div>
-    </div>
-
-    <div class="eventos-section">
-      <div class="eventos-circle"></div>
-
-      <div class="ceremonia-details">
-        <p class="event-title">Ceremonia</p>
-        <i class="fas fa-church event-icon"></i>
-        <p class="event-time">6:00 PM</p>
-        <p class="event-address">IGLESIA LA ERMITA VIRGEN DE SUYAPA</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=IGLESIA+LA+ERMITA+VIRGEN+DE+SUYAPA" target="_blank" class="ver-mapa-button-link">
-          <button class="ver-mapa-button">VER MAPA</button>
-        </a>
-      </div>
-
-      <div class="divider"></div>
-      <div class="recepcion-details">
-        <p class="event-title">Recepción</p>
-        <i class="fas fa-champagne-glasses event-icon"></i>
-        <p class="event-time">7:00 PM</p>
-        <p class="event-address">SALÓN DE EVENTOS</p>
-        <a href="https://maps.app.goo.gl/Zf3TAhoC2urgBwpV8" target="Salon" class="ver-mapa-button-link">
-          <button class="ver-mapa-button">VER MAPA</button>
-        </a>
-      </div>
-    </div>
-
-     <div class="vestimenta-section">
-     <div class="vestimenta-circle"></div>
-     <p class="vestimenta-title">Vestimenta</p>
-     <div class="vestimenta-details">
-       <i class="fas fa-tshirt vestimenta-icon"></i>
-       <p class="vestimenta-description">Formal de noche</p>
-       <p class="vestimenta-note">Se recomienda evitar el color blanco, beige o similares.</p>
-     </div>
-   </div>
-
-   <div class="regalos-section">
-     <div class="regalos-circle"></div>
-     <p class="regalos-title">Regalos</p>
-     <div class="regalos-details">
-       <i class="fas fa-gift regalos-icon"></i>
-       <p class="regalos-message">El mejor regalo es tu presencia, pero si deseas hacernos un obsequio, una contribución en efectivo será de gran ayuda para comenzar nuestro nuevo hogar.</p>
-       </div>
-   </div>
-
-    <div class="confirmation-section">
-      <p class="confirmation-message">Esta será una celebración solo para adultos, <br> ¡esperamos que puedas disfrutarla con nosotros!</p>
-      <a href="confirmacion.html" target="_blank" class="confirmation-button-link">
-        <button class="confirmation-button">Confirmar aquí</button>
-      </a>
-      <p class="confirmation-deadline">Por favor confirmar antes del 15 de septiembre de 2025</p>
-      </div>
-
-    <div class="playlist-section">
-      <p class="playlist-title">Tu misión:</p>
-      <p class="playlist-message">Salvar la pista de baile. Sumate al playlist de la boda, agrega los temazos que no pueden faltar entrando al siguiente link</p>
-      <a href="https://open.spotify.com/playlist/6ScR4M44TPl7k0BC7BDjzp?si=e_gdw3nOSTG5c3pWxONaHg" target="_blank" class="playlist-button-link">
-        <button class="playlist-button">¡Armemos el Playlist!</button>
-      </a>
-    </div>
-
-  </div> <audio id="audio" src="cancionBodaCR.mp3"></audio>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
 </body>
 </html>
