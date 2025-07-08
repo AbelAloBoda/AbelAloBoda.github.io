@@ -71,6 +71,8 @@ h1 {
   line-height: 1.5;
 }
 
+/* ... imagen fondo ... */
+
 .imagen-fondo {
   position: relative;
   width: 100%;
@@ -78,6 +80,8 @@ h1 {
   margin: 0 auto;
   overflow: hidden;
   margin-top: 30px; /* Added margin to separate from message */
+  /* --- CAMBIO AQUÍ: Bordes redondeados --- */
+  border-radius: 20px; /* Igual que otras secciones como contador, eventos, etc. */
 }
 
 .imagen-fondo::before {
@@ -89,6 +93,10 @@ h1 {
   width: 100%;
   background: linear-gradient(to bottom, #fff 0%, transparent 100%);
   z-index: 2;
+  /* --- CAMBIO AQUÍ: Bordes redondeados también para el overlay si lo deseas --- */
+  border-radius: 20px 20px 0 0; /* Solo arriba si el gradiente cubre solo la parte superior */
+  /* Si el gradiente cubre toda la imagen y quieres que tenga el mismo borde redondeado completo: */
+  /* border-radius: 20px; */
 }
 
 .imagen-fondo img,
@@ -97,7 +105,10 @@ h1 {
   height: auto;
   display: block;
   object-fit: cover;
+  border-radius: inherit; 
 }
+
+/* ... img sec ... */
 
 .imagen-secundaria {
   padding: 0 15px;
