@@ -153,6 +153,116 @@ h1 {
   color: #555;
 }
 
+
+/* NEW SECTION STYLES: Padrinos */
+.padrinos-section {
+    background-color: #f4f1ea; /* Same as vestimenta-section */
+    color: #2e4e3f; /* Dark green text */
+    padding: 40px 20px;
+    margin: 40px auto; /* Same margin as contador and eventos-section */
+    border-radius: 20px; /* Same border-radius as other sections */
+    width: 95%; /* Same width as other sections */
+    max-width: 480px; /* Same max-width as other sections */
+    text-align: center;
+    position: relative;
+}
+
+.padrinos-message {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 0 10px; /* Adjust padding if needed */
+    font-style: italic;
+}
+
+.padrinos-subheading {
+    font-family: 'Great Vibes', cursive; /* CAMBIO AQUÍ: Fuente cursiva como los headers */
+    font-size: 1.8em; /* Ajusta el tamaño para que se vea bien con la cursiva */
+    font-weight: normal; /* Great Vibes es naturalmente normal */
+    font-style: italic; /* Asegura que sea cursiva */
+    margin-bottom: 15px;
+    color: #2e4e3f; /* Dark green for consistency with other headers */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sutil sombra para mejor legibilidad */
+}
+
+.padrinos-names {
+    font-family: 'Open Sans', sans-serif; /* Fuente normal de la página */
+    font-size: 1.1em; /* Ajusta el tamaño si es necesario */
+    margin-bottom: 10px;
+    color: #2e4e3f;
+    line-height: 1.4;
+}
+
+.padrinos-emphasis {
+    font-family: 'Great Vibes', cursive; /* Fuente cursiva como los demás títulos */
+    font-size: 2.2em; /* Mantiene el tamaño para destacar */
+    margin-top: 25px;
+    margin-bottom: 15px; /* Reduje el margen inferior para acercar a los nombres */
+    color: #2e4e3f;
+    font-weight: normal; /* Great Vibes es naturalmente ligero */
+    font-style: italic; /* Añadido estilo cursiva */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.padrinos-image {
+    width: 80%; /* Adjust size as needed */
+    max-width: 250px; /* Max width for the image */
+    height: auto;
+    margin-top: 30px; /* Space above the image */
+    border-radius: 10px; /* Slight rounded corners for the image itself */
+    display: block; /* Ensures margin auto works */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Estilos para el contenedor de nombres de padres */
+.parents-names-container {
+    display: flex; /* Para que los grupos de padres estén uno al lado del otro */
+    justify-content: space-around; /* Distribuye el espacio equitativamente entre ellos */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio debajo de esta sección */
+}
+
+.parent-group {
+    flex: 1; /* Permite que cada grupo tome espacio igual */
+    min-width: 150px; /* Ancho mínimo para cada columna */
+    padding: 0 10px; /* Pequeño padding a los lados */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+/* Puedes mantener tus estilos existentes para .padrinos-names, pero asegúrate de que no tengan `text-align: center;` si quieres que el texto se alinee a la izquierda o derecha dentro de su grupo */
+.padrinos-names {
+    font-family: 'Open Sans', sans-serif; /* Fuente normal de la página */
+    font-size: 1.1em; /* Ajusta el tamaño si es necesario */
+    margin-bottom: 5px; /* Reduje el margen inferior para que estén más cerca si son varias líneas */
+    color: #2e4e3f;
+    line-height: 1.4;
+    text-align: center; /* Centra el texto dentro de cada grupo de padres */
+}
+
+.padrinos-names small {
+    font-size: 0.9em; /* Ajusta el tamaño de la pequeña nota */
+    display: block; /* Para que '(Padres de la Novia)' vaya en una nueva línea */
+    margin-top: 2px;
+}
+
+/* Media query para pantallas pequeñas si es necesario apilarlos */
+@media (max-width: 600px) {
+    .parents-names-container {
+        flex-direction: column; /* Apila los grupos en pantallas pequeñas */
+        align-items: center; /* Centra los elementos apilados */
+    }
+    .parent-group {
+        width: 100%; /* Ocupa todo el ancho cuando están apilados */
+        margin-bottom: 15px; /* Espacio entre los grupos apilados */
+    }
+}
+
+/* END NEW SECTION STYLES: Padrinos */
+
 .contador {
   background-color: #2e4e3f;
   color: #f4f1ea;
@@ -350,54 +460,72 @@ h1 {
 
 /* --- Sección de Vestimenta --- */
 .vestimenta-section {
-  background-color: #f4f1ea; /* Fondo claro para la sección */
-  color: #2e4e3f; /* Texto oscuro */
-  padding: 40px 20px;
-  margin: 40px auto;
-  border-radius: 20px;
-  width: 95%;
-  max-width: 480px;
-  text-align: center;
-  position: relative;
+    background-color: #f4f1ea; /* Fondo claro para la sección */
+    color: #2e4e3f; /* Texto oscuro */
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 480px;
+    text-align: center;
+    position: relative;
 }
 
-
 .vestimenta-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3em;
-  margin-bottom: 25px;
-  font-style: italic;
-  font-weight: normal;
-  opacity: 0.9;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    margin-bottom: 25px;
+    font-style: italic;
+    font-weight: normal;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .vestimenta-details {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
-/* ESTILOS PARA EL ÍCONO DE FONT AWESOME (VESTIDO) */
+/* Contenedor para los íconos de vestimenta para control de layout */
+.vestimenta-icons-container {
+    display: flex; /* Permite que los íconos estén en fila */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 20px; /* Espacio entre los íconos */
+    margin-bottom: 20px; /* Espacio debajo de los íconos */
+    align-items: flex-end; /* Alinea los iconos por la parte inferior para que se vean parejos */
+}
+
+/* ESTILOS PARA EL ÍCONO DE VESTIDO (FONT AWESOME) */
 .vestimenta-icon {
-  font-size: 5em; /* Tamaño del icono */
-  margin-bottom: 20px; /* Espacio debajo del icono */
-  opacity: 0.8;
-  color: #2e4e3f; /* Color del icono, debe contrastar con el fondo */
+    font-size: 5em; /* Tamaño del icono */
+    opacity: 0.8;
+    color: #2e4e3f; /* Color del icono, debe contrastar con el fondo */
+    height: 1em; /* Fija la altura para alinear con el SVG */
+    line-height: 1; /* Fija la altura de línea */
+}
+
+/* ESTILOS PARA EL ICONO DE SMOKING SVG */
+.vestimenta-custom-icon-svg {
+    width: 5em; /* Ancho del SVG, para que sea del mismo tamaño que los iconos FA */
+    height: 5em; /* Altura del SVG */
+    opacity: 0.8; /* Misma opacidad que los iconos FA */
+    fill: #2e4e3f; /* Color de relleno del SVG, el mismo que el de Font Awesome */
+    /* Asegúrate de que el path dentro del SVG no tenga un 'fill' o 'stroke' inline para que esto funcione */
 }
 
 
 .vestimenta-description {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.6em;
-  font-weight: bold;
-  margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .vestimenta-note {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 1.1em;
-  font-style: italic;
-  line-height: 1.4;
-  color: #444;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.4;
+    color: #444;
 }
 
 /* --- Sección de Regalos --- */
