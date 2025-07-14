@@ -15,7 +15,7 @@ btnPlay.addEventListener("click", () => {
 });
 
 // Contador regresivo
-const fechaBoda = new Date("2025-12-13T16:00:00").getTime();
+const fechaBoda = new Date("2025-12-13T18:00:00").getTime();
 const diasSpan = document.getElementById("dias");
 const horasSpan = document.getElementById("horas");
 const minutosSpan = document.getElementById("minutos");
